@@ -350,7 +350,7 @@ if ($id && !$products[0]["level"]) {
 
                                                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
 
-                                                                                <button class="theme-btn btn-style-four" type="submit" name="submit-form"><span class="txt"> SEND</span></button>
+                                                                                <button class="theme-btn btn-style-four" type="submit" name="submit-form"><span class="txt"> <?= plang('ارسال', 'SEND') ?></span></button>
                                                                             </div>
                                                                             <input type="hidden" name="project_name" value="<?= $products[0]["name" . $clang] ?>">
                                                                         </div>

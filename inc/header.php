@@ -1353,20 +1353,20 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
 
         @FONT-FACE {
             font-family: "DroidKufi-Regular";
-            src: url("css/DroidKufi-Regular.ttf");
+            src: url("css/TAJAWAL-REGULAR.TTF");
         }
     </style>
     <?php if ($lang == "arabic" && 1 == 1) { ?>
         <style type="text/css">
             @FONT-FACE {
 
-                font-family: "Poppins";
-                src: url("css/DroidKufi-Regular.ttf");
+                font-family: "poppins";
+                src: url("css/TAJAWAL-REGULAR.TTF");
             }
 
             @FONT-FACE {
                 font-family: "Open Sans";
-                src: url("css/DroidKufi-Regular.ttf");
+                src: url("css/TAJAWAL-REGULAR.TTF");
             }
 
             /* ol.breadcrumb li.breadcrumb-item:before {
@@ -1381,8 +1381,97 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 padding-right: 1.125rem;
             }
 
-            .widget2.category_widget ul li {
+            .faq-section:before {
+                left: 0;
+                right: auto;
+            }
+
+            .quick-list li a {
+
+                padding-right: 15px;
+
+                padding-left: 0;
+            }
+
+            .quick-list li {
                 text-align: right;
+                position: relative;
+                width: 50%;
+                float: right;
+            }
+
+            .main-slider-two .slide {
+                direction: rtl;
+            }
+
+            /* .main-slider-two .slide:before {
+
+                right: 0px;
+
+                left: auto;
+            } */
+
+            .main-footer .contact-info-list li {
+
+                padding-right: 40px;
+                padding-left: 0px;
+
+            }
+
+            .widgets-section .widget_title:before,
+            .widgets-section .widget_title:after,
+            .quick-list li a::before,
+            .main-footer .contact-info-list li .icon,
+            .counter-item i {
+                right: 0;
+                left: auto;
+
+            }
+
+            .main-footer .social-box li a {
+                text-align: center;
+            }
+
+            .main-footer .social-box li {
+
+                margin-left: 4px;
+
+            }
+
+            .newsletter-form .form-group button {
+                left: 0;
+                right: auto;
+            }
+
+            .counter-item p {
+
+                margin-right: 15px;
+                margin-left: 0px;
+
+            }
+
+            .counter-item {
+                padding-right: 60px;
+                text-align: right;
+                padding-left: unset;
+            }
+
+            .widget2.category_widget ul li,
+            .widgets-section .widget_title,
+            .main-footer .widgets-section,
+            .main-footer .widgets-section .text,
+            .main-footer .contact-info-list li {
+                text-align: right;
+            }
+
+            .news-block {
+                text-align: right;
+                direction: rtl;
+            }
+
+            .main-header .main-menu .navigation>li {
+                margin-left: 20px;
+                margin-right: 0px;
             }
 
             .widget2.category_widget ul li a {
@@ -1725,7 +1814,8 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 float: right;
             }
 
-            .service-block-four .icon-box h4:before {
+            .service-block-four .icon-box h4:before,
+            .about-home-3 ul li:after {
                 right: 0;
                 left: auto;
             }
@@ -1733,6 +1823,13 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
             .service-block-four .icon-box {
                 right: 30px;
                 left: auto;
+            }
+
+            .about-home-3 ul li {
+
+                padding-right: 25px;
+                padding-left: 0px;
+
             }
 
             .subscribe-widget .form-group input {
@@ -1758,7 +1855,37 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 right: -72%;
             }
 
-            .main-header .nav-outer {
+            .main-header .logo-box,
+            .main-header .main-menu {
+                float: right;
+            }
+
+            .main-header .outer-box {
+                float: left;
+            }
+
+            .main-header .outer-box .nav-btn {
+                margin-right: 20px;
+                margin-left: 0px;
+                padding-right: 20px;
+                padding-left: 0px;
+                border-right: 1px solid;
+                border-left: unset;
+            }
+
+            .main-header .lang-box,
+            .phone-box {
+                margin-left: 20px;
+                margin-right: 0px;
+            }
+
+            .main-header .lang-box a span {
+                margin-left: 6px;
+                margin-right: 0px;
+            }
+
+            .main-header .nav-outer,
+            .main-header .header-lower .nav-outer {
                 float: left;
             }
 
@@ -1892,8 +2019,9 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                 text-align: right;
             }
 
-            .main-menu .navigation li {
-                display: inline-block;
+            .main-menu .navigation li,
+            .main-header .main-menu .navigation>li {
+                /* // display: inline-block; */
                 float: right;
             }
 
@@ -3080,7 +3208,7 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="javascript:void(0)"><?= plang('والوسائط', 'Media') ?> </a>
+                                            <a href="javascript:void(0)"><?= plang('الوسائط', 'Media') ?> </a>
                                             <ul>
                                                 <li><a href="<?= $core->getPageUrl("video" . $plang) ?>"><?= getTitle("video" . $plang) ?></a></li>
 
@@ -3143,12 +3271,12 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
             <div class="sticky-header">
                 <div class="auto-container clearfix">
                     <!-- Logo -->
-                    <div class="logo pull-left">
+                    <div class="logo pull-<?= plang("right", "left") ?>">
                         <a href="<?= $core->getPageUrl("index" . $plang) ?>" title=""><img src="images/logo.png" alt="" title="" /></a>
                     </div>
 
                     <!--Right Col-->
-                    <div class="pull-right">
+                    <div class="pull-<?= plang("left", "right") ?>">
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <!--Keep This Empty / Menu will come through Javascript-->
