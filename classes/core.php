@@ -6,8 +6,8 @@ ini_set('display_startup_errors', $er);
 if ($er) {
 	error_reporting(E_ERROR);
 }
-require("JavascriptMinifier.phpclass");
-require("CssMinifier.phpclass");
+// require("JavascriptMinifier.phpclass");
+// require("CssMinifier.phpclass");
 class core extends mysqli
 {
 
@@ -6384,6 +6384,7 @@ function getTitle($key, $val = "title", $php = true)
 	$contents = $core->getEngines(array("page" => $key . ($php ? ".php" : "")));
 	return $contents[0][$val];
 }
+
 function limit_str($text, $limit, $d = false)
 {
 	$m = explode(" ", $text);

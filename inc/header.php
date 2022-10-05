@@ -50,25 +50,156 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
     <title><?= $title ?></title>
     <meta name="keywords" content="<?= $keywords ?>" />
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/icofont.css" rel="stylesheet" />
+    <!-- <link href="css/icofont.css" rel="stylesheet" /> -->
     <link href="css/fontawesome-all.css" rel="stylesheet" />
-    <link href="css/flaticon.css" rel="stylesheet" />
-    <link href="css/flaticon2.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/owl.css" rel="stylesheet" />
-    <link href="css/linearicons.css" rel="stylesheet" />
-    <link href="css/jquery-ui.css" rel="stylesheet" />
-    <link href="css/custom-animate.css" rel="stylesheet" />
+    <link href="css/flaticon.min.css" rel="stylesheet" />
+    <link href="css/flaticon2.min.css" rel="stylesheet" />
+    <!-- <link href="css/animate.css" rel="stylesheet" /> -->
+    <link href="css/owl.min.css" rel="stylesheet" />
+    <!-- <link href="css/linearicons.css" rel="stylesheet" /> -->
+    <!-- <link href="css/jquery-ui.css" rel="stylesheet" /> -->
+    <!-- <link href="css/custom-animate.css" rel="stylesheet" /> -->
     <link href="css/jquery.fancybox.min.css" rel="stylesheet" />
     <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/responsive.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link href="css/venobox.css" rel="stylesheet" />
+    <!-- This site is optimized with the Yoast SEO plugin v18.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <?php $logo = "images/wlogo.webp"; ?>
+    <link rel="canonical" href="<?= $FUr ?>" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?= $title ?>" />
+    <meta property="og:url" content="<?= $FUr ?>" />
+    <meta property="og:site_name" content="<?= $alt ?>" />
+    <meta property="article:publisher" content="<?= getValue("facebook") ?>" />
+    <meta property="article:modified_time" content="2021-07-01T04:18:37+00:00" />
+    <meta property="og:image" content="<?= $logo ?>" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" class="yoast-schema-graph">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "Organization",
+                "@id": "<?= $PUr ?>#organization",
+                "name": "Emaar Properties PJSC",
+                "url": "<?= $PUr ?>",
+                "sameAs": ["<?= getValue("facebook") ?>"],
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "<?= $PUr ?>#logo",
+                    "inLanguage": "ar",
+                    "url": "<?= $logo ?>",
+                    "contentUrl": "<?= $logo ?>",
+                    "width": 300,
+                    "height": 300,
+                    "caption": "Emaar Properties PJSC"
+                },
+                "image": {
+                    "@id": "<?= $PUr ?>#logo"
+                }
+            }, {
+                "@type": "WebSite",
+                "@id": "<?= $PUr ?>#website",
+                "url": "<?= $PUr ?>",
+                "name": "Emaar Properties PJSC",
+                "description": "Global Property Developer",
+                "publisher": {
+                    "@id": "<?= $PUr ?>#organization"
+                },
+                "potentialAction": [{
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "<?= $PUr ?>?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }],
+                "inLanguage": "ar"
+            }, {
+                "@type": "WebPage",
+                "@id": "<?= $PUr ?>#webpage",
+                "url": "<?= $PUr ?>",
+                "name": "<?= $alt ?>",
+                "isPartOf": {
+                    "@id": "<?= $PUr ?>#website"
+                },
+                "about": {
+                    "@id": "<?= $PUr ?>#organization"
+                },
+                "datePublished": "2020-03-26T12:12:36+00:00",
+                "dateModified": "2021-07-01T04:18:37+00:00",
+                "breadcrumb": {
+                    "@id": "<?= $PUr ?>#breadcrumb"
+                },
+                "inLanguage": "ar",
+                "potentialAction": [{
+                    "@type": "ReadAction",
+                    "target": ["<?= $PUr ?>"]
+                }]
+            }, {
+                "@type": "BreadcrumbList",
+                "@id": "<?= $PUr ?>#breadcrumb",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home"
+                }]
+            }]
+        }
+    </script>
+    <!-- / Yoast SEO plugin. -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '442959390378371');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=442959390378371&ev=PageView&noscript=1" />
+    </noscript>
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-234950031-1" id="google_gtagjs-js" async=""></script>
+    <script type="text/javascript" id="google_gtagjs-js-after">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('set', 'linker', {
+            "domains": ["regencyud.com"]
+        });
+        gtag("js", new Date());
+        gtag("set", "developer_id.dZTNiMT", true);
+        gtag("config", "UA-234950031-1", {
+            "anonymize_ip": true
+        });
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- <link href="css/venobox.css" rel="stylesheet" /> -->
     <style type="text/css">
         .widget2>form {
             position: relative;
@@ -1367,6 +1498,10 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
             @FONT-FACE {
                 font-family: "Open Sans";
                 src: url("css/TAJAWAL-REGULAR.TTF");
+            }
+
+            .portfolio_c .portfolio_classic_content {
+                text-align: right;
             }
 
             /* ol.breadcrumb li.breadcrumb-item:before {
@@ -3168,8 +3303,8 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                     <div class="inner-container clearfix">
                         <div class="pull-left logo-box">
                             <div class="logo">
-                                <a class="desk-logo" href="<?= $core->getPageUrl("index" . $plang) ?>"><img src="images/wlogo.png" alt="" title="" /></a>
-                                <a class="mob-logo" href="<?= $core->getPageUrl("index" . $plang) ?>"><img src="images/wlogo.png" alt="" title="" /></a>
+                                <a class="desk-logo" href="<?= $core->getPageUrl("index" . $plang) ?>"><img src="images/wlogo.webp" alt="" title="" /></a>
+                                <a class="mob-logo" href="<?= $core->getPageUrl("index" . $plang) ?>"><img src="images/wlogo.webp" alt="" title="" /></a>
                             </div>
                         </div>
                         <div class="nav-outer clearfix">
@@ -3373,9 +3508,9 @@ if (@$exKeywords) $keywords = $keywords . "," . $exKeywords;
                                 <figure> <img src="images/logo.png" alt="Image"> </figure>
                                 <?= getValue('slidebar_text', $lang) ?>
                                 <ul class="gallery" style="position: relative; height: 125.2px;">
-                                    <li><a href="images/Tower-1.jpg" data-fancybox=""><img src="images/Tower-1.jpg" alt="Image"></a></li>
-                                    <li><a href="images/Tower-2.jpg" data-fancybox=""><img src="images/Tower-2.jpg" alt="Image"></a></li>
-                                    <li><a href="images/Tower-3.jpg" data-fancybox=""><img src="images/Tower-3.jpg" alt="Image"></a></li>
+                                    <li><a href="images/Tower-1.webp" data-fancybox=""><img src="images/Tower-1.webp" alt="Image"></a></li>
+                                    <li><a href="images/Tower-2.webp" data-fancybox=""><img src="images/Tower-2.webp" alt="Image"></a></li>
+                                    <li><a href="images/Tower-3.webp" data-fancybox=""><img src="images/Tower-3.webp" alt="Image"></a></li>
                                 </ul>
                                 <address>
                                     <?= getValue('footer_adress', $lang) ?>

@@ -147,12 +147,12 @@ $clang : get form  inc.php for column name  =  _arabic || "" ;
 
 
 
-        <div class="all-time-hit-two-bg-shape" style="background-image: url(images/all-time-hit-two-bg-shape.png);"></div>
+        <div class="all-time-hit-two-bg-shape" style="background-image: url(images/all-time-hit-two-bg-shape.webp);"></div>
 
         <div class="galvid owl-carousel custom-nav">
 
             <?php
-            $products = $core->getproducts(array("special" => 1));
+            $products = $core->getprojects([]);
             if ($products)
                 for ($i = 0; $i < count($products); $i++) {
                     if ($products[$i]["level"])
@@ -163,7 +163,7 @@ $clang : get form  inc.php for column name  =  _arabic || "" ;
                 <div class="iter">
                     <div class="portfolio_c tg_two_cols   portfolio-1 tile scale-anm  all no_filter">
                         <div class="portfolio-img">
-                            <img src="images/Tower-1.jpg" alt="">
+                            <img src="images/<?= $products[$i]["image"] ?>" alt="">
                             <div class="tyo">
                                 <span class="fal fa-arrow-<?= plang("left", "right") ?>"></span>
                                 <div class="curl"></div>

@@ -216,20 +216,20 @@
 
 
     <div class="whats-icon" data-target="html">
-        <a href="https://api.whatsapp.com/send?phone=+"><span class="icon fab fa-whatsapp"></span>
+        <a href="https://api.whatsapp.com/send?phone=+<?= getValue("whatsapp") ?>"><span class="icon fab fa-whatsapp"></span>
         </a>
     </div>
 
 
 
     <div class="messenger-icon" data-target="html">
-        <a href="https://m.me/"><span class="icon fab fa-facebook-messenger"></span>
+        <a href="<?= getValue("messenger") ?>"><span class="icon fab fa-facebook-messenger"></span>
         </a>
     </div>
 
 
     <div class="phone-icon" data-target="html">
-        <a href="tel:"><span class="icon fal fa-phone"></span>
+        <a href="tel:+<?= getValue("mobile") ?>"><span class="icon fal fa-phone"></span>
         </a>
     </div>
 
@@ -241,24 +241,18 @@
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fal fa-arrow-up"></span></div>
 
 <script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js" async> </script>
+<script src="js/bootstrap.min.js" async></script>
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/jquery.paroller.min.js"></script>
-
-
+<script src="js/jquery.fancybox.js" async></script>
+<script src="js/parallax.min.js" async></script>
+<script src="js/jquery.paroller.min.js" async></script>
 <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-
-
-
-<script src="js/owl.js"></script>
-<script src="js/nav-tool.js"></script>
-
-<script src="js/script.js"></script>
-<script src="js/venobox.min.js"></script>
+<script src="js/counterup.min.js" async></script><!-- COUNTERUP JS -->
+<script src="js/owl.min.js"></script>
+<script src="js/nav-tool.js" async></script>
+<script src="js/script.min.js" async></script>
+<!-- <script src="js/venobox.min.js"></script>
 <script>
     jQuery(document).ready(function($) {
 
@@ -274,7 +268,7 @@
             share: ['facebook', 'twitter', 'download'] // default: []
         });
     });
-</script>
+</script> -->
 </body>
 
 </html>
